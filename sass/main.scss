@@ -1,11 +1,14 @@
-@import "./vars";
-@import "./header";
-@import "./hero";
-@import "./about";
-@import "./work";
-@import "./team";
-@import "./clients";
-@import "./footer";
+@import "./utils/vars";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/about";
+@import "./components/work";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/footer";
 
-@import "./portfolio";
-@import "./modal";
+
+
+@import "./components/portfolio";
+
+@import "./components/";

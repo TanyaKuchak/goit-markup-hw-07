@@ -83,3 +83,14 @@
     background-color: var(--accent-color);
     color: var(--color-white);
 }
+
+/* універсальний і для кольору і розміру
+.team-soc-link:hover,
+.team-soc-link :focus {
+  background-color: var(--accent-color);
+}
+
+.team-soc-link:hover .team-soc-icon,
+.team-soc-link :focus .team-soc-icon {
+  fill: var(--color-white);
+} */

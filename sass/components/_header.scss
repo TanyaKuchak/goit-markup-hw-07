@@ -1,3 +1,13 @@
+/* .header-list .header-item{
+
+  margin-right: 50px;
+} */
+/* .header-list .header-item:last-child{
+margin-right: 0;
+} */
+/* .header-list .header-item:not(:last-child){
+  margin-right: 50px;
+} */
 .header .container {
     display: flex;
     align-items: center;
