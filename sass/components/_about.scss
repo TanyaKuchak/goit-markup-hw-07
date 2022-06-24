@@ -1,14 +1,14 @@
-.about-list {
+.about__list {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.about-list .about-item+.about-item {
+.about__list .about_item+.about_item {
     margin-left: var(--content-list-gap);
 }
 
-.about-top-text {
+.about__top-text {
     font-weight: 700;
     margin-bottom: 10px;
     font-size: 14px;
@@ -17,14 +17,14 @@
     color: var(--primary-font-color);
 }
 
-.about-text {
+.about__text {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.72;
     color: var(--info-font-color);
 }
 
-.about-item-container {
+.about__item-container {
     width: 270px;
     height: 120px;
     border-radius: 4px;

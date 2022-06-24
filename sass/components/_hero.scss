@@ -13,7 +13,8 @@
     margin: 0 auto;
 }
 
-.hero-title {
+.hero__title {
+
     margin-bottom: var(--content-list-gap);
     width: 696px;
     margin-left: auto;
@@ -46,7 +47,7 @@
     border-radius: 4px;
 }
 
-.button.primary {
+.hero__btn {
     background-color: var(--accent-color);
     color: var(--color-white);
 
@@ -55,7 +56,7 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button.primary:hover,
-.button.primary :focus {
+.hero__btn:hover,
+.hero__btn :focus {
     background-color: var(--btn-bg-color);
 }

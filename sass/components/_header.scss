@@ -13,30 +13,33 @@ margin-right: 0;
     align-items: center;
 }
 
-.header-nav {
+.nav {
     display: flex;
     align-items: center;
 }
 
-.header-list .header-item+.header-item {
+.nav__list .nav__item+.nav__item {
     margin-left: 50px;
 }
 
-.header-list {
+.nav__list {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-info-list .header-item+.header-item {
-    margin-left: 50px;
+.nav__list {
+    display: flex;
 }
+
+
+
 
 .header {
     border-bottom: 1px solid #ececec;
 }
 
-.header-link {
+.nav__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -53,6 +56,10 @@ margin-right: 0;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.nav__item {
+    position: relative;
+}
+
 span {
     color: var(--accent-color);
 
@@ -62,34 +69,26 @@ span {
     line-height: 1.2;
 }
 
-.header-logo {
-    margin-right: 93px;
-    color: var(--color-black);
 
-    font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
-}
 
 .header-connect {
     margin-left: auto;
 }
 
-.header-list,
-.header-link:hover,
-.header-list,
-.header-link :focus {
+.nav__list,
+.nav__link:hover,
+.nav__list,
+.nav__link :focus {
     color: var(--accent-color);
 }
 
-.header-info-list {
+.connect {
     display: flex;
     margin-left: auto;
 }
 
-.header-info,
-.header-tel {
+.connect__info,
+.connect__tel {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -103,25 +102,29 @@ span {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-info-icon {
+.connect .connect__item+.connect__item {
+    margin-left: 50px;
+}
+
+.connect__info-icon {
     fill: currentColor;
     margin-right: 10px;
 }
 
-.header-tel-icon {
+.connect__tel-icon {
     fill: currentColor;
     margin-right: 10px;
 }
 
-.header-info:hover,
-.header-info:focus,
-.header-tel:hover,
-.header-tel:focus {
+.connect__info:hover,
+.connect__info:focus,
+.connect__tel:hover,
+.connect__tel:focus {
     color: var(--accent-color);
     fill: var(--accent-color);
 }
 
-.header-item {
+.connect__item {
     position: relative;
 }
 

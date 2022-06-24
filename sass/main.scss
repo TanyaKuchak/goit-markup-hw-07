@@ -1,4 +1,13 @@
 @import "./utils/vars";
+@import "./components/reset";
+@import "./components/common";
+
+@import "./components/container";
+@import "./components/hidden";
+@import "./components/section";
+@import "./components/logo";
+@import "./components/_socials";
+
 @import "./components/header";
 @import "./components/hero";
 @import "./components/about";
@@ -6,9 +15,5 @@
 @import "./components/team";
 @import "./components/clients";
 @import "./components/footer";
-
-
-
 @import "./components/portfolio";
-
-@import "./components/";
+@import "./components/modal";

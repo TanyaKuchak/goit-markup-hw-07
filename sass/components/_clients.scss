@@ -1,22 +1,22 @@
-.client-container {
+.client {
     margin: 0 auto;
 }
 
-.clients-title {
+.client__title {
     margin-bottom: 50px;
 }
 
-.clients-list {
+.client__list {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.clients-list .clients-item+.clients-item {
+.client__list .client__item+.client__item {
     margin-left: var(--content-list-gap);
 }
 
-.client-link {
+.client__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,12 +31,12 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.client-icon {
+.client__icon {
     fill: currentColor;
 }
 
-.client-link:hover,
-.client-link:focus {
+.client__link:hover,
+.client__link:focus {
     border-color: var(--accent-color);
     color: var(--accent-color);
 }
