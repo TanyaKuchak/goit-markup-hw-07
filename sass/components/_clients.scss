@@ -10,10 +10,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-.client__list .client__item+.client__item {
-    margin-left: var(--content-list-gap);
+    & .client__item+.client__item {
+        margin-left: var(--content-list-gap);
+    }
 }
 
 .client__link {
@@ -29,17 +29,19 @@
     transition-property: border-color, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
 }
 
 .client__icon {
     fill: currentColor;
 }
 
-.client__link:hover,
-.client__link:focus {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-}
+
 
 /* .client-link:hover .client-icon,
 .client-link:focus .client-icon {

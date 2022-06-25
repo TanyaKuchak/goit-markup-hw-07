@@ -10,6 +10,10 @@
 .team__list {
     display: flex;
     justify-content: center;
+
+    .team__item+.team__item {
+        margin-left: var(--content-list-gap);
+    }
 }
 
 .team__item {
@@ -26,20 +30,13 @@
 
 .team-card__top-text {
     text-align: center;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.18;
+    @include font(16px, 500, 1.62, null);
     margin-bottom: 10px;
 }
 
-.team__list .team__item+.team__item {
-    margin-left: var(--content-list-gap);
-}
-
 .team-card__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.18;
+    @include font(16px, 400, 1.18, null);
+
     text-align: center;
     color: var(--info-font-color);
     margin-bottom: 16px;

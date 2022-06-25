@@ -14,8 +14,6 @@
     margin-right: 70px;
 }
 
-
-
 //     font-family: 'Raleway';
 //     font-weight: 700;
 //     font-size: 26px;
@@ -32,6 +30,11 @@ address {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .contact__address {
@@ -43,34 +46,34 @@ address {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.contact__address:hover,
-.ccontact__link:hover,
-.contact__link:focus,
-.contact__address:focus {
-    color: var(--accent-color);
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
 
 .contact__item {
     margin-bottom: 9px;
-}
 
-.contact__item:last-child {
-    margin-bottom: 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .contact__address {
     margin-top: 20px;
 }
 
+
 .soc__invitation {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.03em;
+    @include font(14px, 700, 1.17, null);
+    // font-weight: 700;
+    // font-size: 14px;
+    // line-height: 16px;
+    // letter-spacing: 0.03em;
     text-transform: uppercase;
 
     color: var(--color-white);
@@ -82,15 +85,15 @@ address {
     display: flex;
 }
 
-
 .subscribe__text {
     margin-bottom: 20px;
 
     font-family: 'Roboto';
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
+    @include font(14px, 700, 1.88, 0.03em);
+    // font-weight: 700;
+    // font-size: 14px;
+    // line-height: 1.88;
+    // letter-spacing: 0.03em;
     text-transform: uppercase;
 
     color: var(--color-white);
@@ -118,10 +121,10 @@ address {
     padding-bottom: 15px;
     color: var(--color-white);
     background-color: var(--footer-bg-color);
-}
 
-.subscribe__input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
 }
 
 .subscribe__btn {
@@ -137,10 +140,11 @@ address {
     margin-right: 10px;
     padding-right: 29px;
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
+    @include font(16px, 700, 1.88, 0.06em);
+    // font-weight: 700;
+    // font-size: 16px;
+    // line-height: 1.88;
+    // letter-spacing: 0.06em;
 
     background-color: var(--accent-color);
     border: none;
@@ -153,12 +157,12 @@ address {
     transition-property: background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.subscribe__btn:hover,
-.subscribe__btn:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    background-color: var(--btn-bg-color);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        background-color: var(--btn-bg-color);
+    }
 }
 
 .subscribe__soc-icon {

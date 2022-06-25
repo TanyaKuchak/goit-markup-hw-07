@@ -18,22 +18,21 @@ margin-right: 0;
     align-items: center;
 }
 
-.nav__list .nav__item+.nav__item {
-    margin-left: 50px;
-}
-
 .nav__list {
+    display: flex;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    & .nav__item+.nav__item {
+        margin-left: 50px;
+    }
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
 }
-
-.nav__list {
-    display: flex;
-}
-
-
-
 
 .header {
     border-bottom: 1px solid #ececec;
@@ -54,6 +53,11 @@ margin-right: 0;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    & :focus {
+        color: var(--accent-color);
+    }
 }
 
 .nav__item {
@@ -64,35 +68,27 @@ span {
     color: var(--accent-color);
 
     font-family: 'Raleway';
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
+    @include font(26px, 700, 1.2, null);
+
 }
-
-
 
 .header-connect {
     margin-left: auto;
 }
 
-.nav__list,
-.nav__link:hover,
-.nav__list,
-.nav__link :focus {
-    color: var(--accent-color);
-}
-
 .connect {
     display: flex;
     margin-left: auto;
+
+    & .connect__item+.connect__item {
+        margin-left: 50px;
+    }
 }
 
 .connect__info,
 .connect__tel {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+    @include font(14px, 500, 1.14, 0.02em);
+
     color: var(--sec-font-color);
     display: flex;
     align-items: center;
@@ -100,10 +96,14 @@ span {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.connect .connect__item+.connect__item {
-    margin-left: 50px;
+    &:hover,
+    // &:focus,
+    // &:hover,
+    &:focus {
+        color: var(--accent-color);
+        fill: var(--accent-color);
+    }
 }
 
 .connect__info-icon {
@@ -116,31 +116,23 @@ span {
     margin-right: 10px;
 }
 
-.connect__info:hover,
-.connect__info:focus,
-.connect__tel:hover,
-.connect__tel:focus {
-    color: var(--accent-color);
-    fill: var(--accent-color);
-}
-
 .connect__item {
     position: relative;
 }
 
 .current {
     color: var(--accent-color);
-}
 
-.current::after {
-    content: '';
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-    box-shadow: 0px 1px 2px rgba(44, 42, 42, 0.692), 0px 1px 1px rgba(219, 212, 212, 0.87);
+    &::after {
+        content: '';
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: var(--accent-color);
+        box-shadow: 0px 1px 2px rgba(44, 42, 42, 0.692), 0px 1px 1px rgba(219, 212, 212, 0.87);
+    }
 }

@@ -2,23 +2,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-.about__list .about_item+.about_item {
-    margin-left: var(--content-list-gap);
+    & .about_item+.about_item {
+        margin-left: var(--content-list-gap);
+    }
 }
 
 .about__top-text {
+    
     font-weight: 700;
-    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
+    margin-bottom: 10px;
     text-transform: uppercase;
     color: var(--primary-font-color);
 }
 
 .about__text {
-    font-weight: 400;
+    margin-bottom: 10px;
+
     font-size: 14px;
     line-height: 1.72;
     color: var(--info-font-color);

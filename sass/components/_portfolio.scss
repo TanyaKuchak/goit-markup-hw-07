@@ -19,11 +19,9 @@
     background-color: var(--sec-bg-color);
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
+    @include font(16px, 500, 1.63, 0.03em);
+
     text-align: center;
-    letter-spacing: 0.03em;
     cursor: pointer;
 
     color: var(--primary-font-color);
@@ -32,6 +30,14 @@
     transition-property: color, background-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--color-white);
+        background-color: var(--accent-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
 }
 
 .content-list>.content-item {
@@ -54,24 +60,18 @@
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.content-info:hover,
-.content-info:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-        1px 4px 6px rgba(0, 0, 0, 0.16);
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .content-thumb {
     position: relative;
     overflow: hidden;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.content-info:hover .content-thumb-text,
-.content-info:focus .content-thumb-text {
-    /* opacity: 1; */
-    transform: translateX(0);
 }
 
 .content-thumb-text {
@@ -90,14 +90,16 @@
 
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
+    @include font(18px, 400, 1.56, 0.03em);
+
 
     color: var(--color-white);
-    /* outline: 2px solid rgba(235, 150, 0, 0.9); */
     background: rgba(33, 150, 243, 0.9);
+
+    .content-info:hover &,
+    .content-info:focus & {
+        transform: translateX(0);
+    }
 }
 
 .portfolio-card {
@@ -106,26 +108,13 @@
     border-top: 0;
 }
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
-    color: var(--color-white);
-    background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-        0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
 .content-top-text {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
+    @include font(18px, 700, 2, 0.06em);
     margin-bottom: 4px;
     color: var(--primary-font-color);
 }
 
 .content-text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.88;
+    @include font(16px, 400, 1.88, null);
     color: var(--info-font-color);
 }

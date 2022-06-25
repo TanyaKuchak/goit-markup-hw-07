@@ -22,10 +22,7 @@
 
     align-items: center;
     justify-content: center;
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    @include font(44px, 900, 1.36, 0.06em);
     text-transform: uppercase;
 
     color: var(--color-white);
@@ -36,11 +33,7 @@
     padding: 10px 32px;
 
     font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-
+    @include font(16px, 700, 1.87, 0.06em);
     cursor: pointer;
     border: none;
     background: var(--accent-color);
@@ -54,9 +47,9 @@
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.hero__btn:hover,
-.hero__btn :focus {
-    background-color: var(--btn-bg-color);
+    &:hover,
+    & :focus {
+        background-color: var(--btn-bg-color);
+    }
 }
