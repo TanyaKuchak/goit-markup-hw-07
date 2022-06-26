@@ -3,13 +3,14 @@
     align-items: center;
     justify-content: center;
 
-    & .about_item+.about_item {
+    & .about__item+.about__item {
         margin-left: var(--content-list-gap);
     }
 }
 
+
+
 .about__top-text {
-    
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -19,8 +20,6 @@
 }
 
 .about__text {
-    margin-bottom: 10px;
-
     font-size: 14px;
     line-height: 1.72;
     color: var(--info-font-color);
